@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: AridaneGarcia/seoparab2b
+  branch: main
+locale: es
+publish_mode: simple
+media_folder: static/img/blog
+public_folder: /img/blog
+site_url: https://seoparab2b.com
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Entrada
+    folder: content/blog
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: date, label: Fecha, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { name: description, label: Descripción SEO (una frase), widget: string }
+      - { name: image, label: Imagen destacada, widget: image, required: false }
+      - { name: draft, label: Borrador (no se publica), widget: boolean, default: false }
+      - { name: body, label: Contenido, widget: markdown }

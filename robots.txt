@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seoparab2b.com/sitemap.xml
